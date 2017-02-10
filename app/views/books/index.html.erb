@@ -1,0 +1,12 @@
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <h1><%= book.title %></h1>
+  <p>Author: <%= book.author %></p>
+  <p>Already Read:</p>
+    <% if  book.already_read %>
+      <%= "You've read the book!" %>
+    <% else %>
+      <%= "You've read the book."%>
+    <% end %>
+<% end %>

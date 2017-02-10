@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   get 'books' => 'books#index'
+  # root GET  /                pages#home
+  # books GET  /books(.:format) books#index
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
