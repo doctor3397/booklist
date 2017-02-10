@@ -3,7 +3,14 @@
 require 'csv'
 
 class Book < ActiveRecord::Base
+
   # This method is used to create a CSV representation of the data in the database
+# id	 title	                       author	            already_read
+# 1	 The Secret History	            Donna Tartt	         true
+# 2	 Why's (Poignant) Guide to Ruby	Why the Lucky Stiff	 true
+# 3	 Pink Noises	                    Tara Rodgers	       false
+
+
   def self.generate_csv(book_list)
     header = ['id', 'title', 'author', 'already_read']
 

@@ -5,7 +5,12 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       format.html  #http://localhost:3000/books.html
-      format.text  
+      format.text
+      format.csv do
+        formated_csv = Book.generate_csv(@books)
+        render plain: formated_csv
+      end
+
 
     end
 
