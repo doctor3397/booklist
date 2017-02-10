@@ -1,0 +1,11 @@
+<% @books.each do |book| %>
+  <%= book.title %>
+  Author: <%= book.author %>
+  Already Read:
+    <% if  book.already_read %>
+      <%= "You've read the book!" %>
+    <% else %>
+      <%= "You've read the book."%>
+    <% end %>
+
+<% end %>
